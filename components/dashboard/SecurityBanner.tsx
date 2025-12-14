@@ -9,14 +9,26 @@ export default function SecurityBanner() {
     <div
       className={cn(
         "relative w-full rounded-2xl overflow-hidden",
-        "bg-[#2A3036] border border-white/5",
-        "flex items-center gap-6 p-6"
+        "bg-[#191D21] border border-white/5",
+        "flex items-center gap-6 py-2 px-5"
       )}
     >
+      {/* Absolute positioned security element image on the left */}
+      <div className="absolute left-12 top-1/2 -translate-y-1/2 -translate-x-2/3 pointer-events-none select-none">
+        <Image
+          src="/dashboard/images/security-element.webp"
+          alt="Security Element"
+          width={300}
+          height={580}
+          className="object-contain"
+          priority
+          draggable={false}
+        />
+      </div>
       {/* Left: Security Icon */}
       <div className="shrink-0 relative w-20 h-20 overflow-hidden">
         <Image
-          src="/dashboard/images/object-banner.png"
+          src="/dashboard/icons/Icon.png"
           alt="Security shield icon"
           fill
           className="object-contain"
@@ -35,18 +47,21 @@ export default function SecurityBanner() {
         </p>
       </div>
 
+      {/* Absolute positioned security element image on the left */}
+      <div className="absolute -right-7 top-1/2 -translate-y-1/2  pointer-events-none select-none">
+        <Image
+          src="/dashboard/images/banner-pattern.png"
+          alt="Security Element"
+          width={300}
+          height={580}
+          className="object-contain"
+          priority
+          draggable={false}
+        />
+      </div>
+
       {/* Right: Button with Pattern Background */}
       <div className="shrink-0 relative overflow-hidden rounded-lg">
-        {/* Pattern Background - extends behind button area */}
-        <div className="absolute -inset-4">
-          <Image
-            src="/dashboard/images/banner-pattern.png"
-            alt="Pattern background"
-            fill
-            className="object-cover"
-            style={{ position: "absolute", opacity: 0.4 }}
-          />
-        </div>
         {/* Button */}
         <Button
           variant="outline"

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import SecurityBanner from "@/components/dashboard/SecurityBanner";
 import PortfolioSection from "@/components/dashboard/portfolio/PortfolioSection";
 import AssetsSection from "@/components/dashboard/assets/AssetsSection";
@@ -5,6 +6,12 @@ import PortfolioBreakdown from "@/components/dashboard/portfolio/PortfolioBreakd
 import MarketsTable from "@/components/dashboard/markets/MarketsTable";
 import StakingsSection from "@/components/dashboard/stakings/StakingsSection";
 import CommunitySection from "@/components/dashboard/community/CommunitySection";
+
+export const metadata: Metadata = {
+  title: "Dashboard",
+  description:
+    "Manage your portfolio, assets, markets, stakings, and community all in one place.",
+};
 
 export default function DashboardPage() {
   return (
